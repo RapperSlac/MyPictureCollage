@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="lib/style.css">    
+   <style>    
+        #Kolaj 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        #Kolaj img 
+        {
+            width: calc(33.33% - 50px); /* 3 sütunlu, aralarında 10px boşluklu */
+            padding:05px;            
+            height: auto;
+        }      
+    </style>
+  </head>
+
+  <body>
+      <h1>Resim Kolajım</h1>
+      <br>
+      <div id='Kolaj'>
+      </div>
+      <script >
+        function AddImage()
+        {
+          for(var i=0;i<15;i++)
+          {
+           var Img = document.createElement('img')
+           Img.id=("Resim "+i) 
+           Img.src=("http://source.unsplash.com/random/"+i)
+           var Kolaj = document.getElementById('Kolaj');
+           Kolaj.appendChild(Img);   
+          }
+        }
+        AddImage()
+      </script>
+  </body>
+</html>
